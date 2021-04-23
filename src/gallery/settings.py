@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-77&qynx4w(ua86hy4zewcc9y5c7osgyl)3!g-d@0e$@5po&f4#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "photo",
+    "videos",
 ]
 
 MIDDLEWARE = [
@@ -74,9 +76,13 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "gallery_db",
+        "USER": "postgres",
+        "PASSWORD": "root",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
