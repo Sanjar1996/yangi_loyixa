@@ -1,1 +1,1 @@
-Biz boshladik Xudo xoxlasa
+## Assalomu alaykum
